@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
-import { Ionicons } from "@expo/vector-icons"; // ✅ FIXED: Import Ionicons
+import { Ionicons } from "@expo/vector-icons";
 import { useRouter } from "expo-router";
 
 export default function Stopwatch() {
   const [time, setTime] = useState(0);
   const [isRunning, setIsRunning] = useState(false);
-  const router = useRouter(); // ✅ FIXED: Use the router
+  const router = useRouter();
 
   useEffect(() => {
     let interval = null;
@@ -18,7 +18,6 @@ export default function Stopwatch() {
     return () => clearInterval(interval);
   }, [isRunning]);
 
-  // Convert time to HH:MM:SS format
   const formatTime = (seconds) => {
     const hrs = String(Math.floor(seconds / 3600)).padStart(2, "0");
     const mins = String(Math.floor((seconds % 3600) / 60)).padStart(2, "0");
@@ -28,14 +27,14 @@ export default function Stopwatch() {
 
   return (
     <View style={styles.container}>
-      {/* ✅ FIXED: Router Back Button */}
+      {}
       <TouchableOpacity style={styles.backButton} onPress={() => router.push("../(tabs)/exercises")}>
       <Ionicons name="arrow-back" size={24} color="black" />
       </TouchableOpacity>
 
       <Text style={styles.time}>{formatTime(time)}</Text>
 
-      {/* Buttons beside each other */}
+      {}
       <View style={styles.buttonContainer}>
         <TouchableOpacity
           style={[styles.button, isRunning ? styles.stopButton : styles.startButton]}
