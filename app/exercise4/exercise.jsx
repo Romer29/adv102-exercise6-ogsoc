@@ -9,7 +9,7 @@ import {
 
 import { useRouter } from "expo-router";
 import HTMLView from "react-native-htmlview";
-import Stopwatch from "./Stopwatch"; // ✅ Correct Import Path
+import Stopwatch from "./Stopwatch";
 
 export default function Exercise() {
   const [selectedExercise, setSelectedExercise] = useState(null);
