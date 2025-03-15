@@ -20,7 +20,10 @@ export default function Exercise() {
       description:
         "Create a STOP WATCH<br/>Must Have:\n\n<ul><li>Hours, Minutes, and Seconds</li><li>Start Button</li><li>Reset Button</li><li>Automatically Run</li></ul>",
     },
-    { title: "Exercise 5", description: "UPCOMING" },
+    { title: "Exercise 5", 
+      description: "Create a register screen and add a title and description to the card in the exercise tab.<br/>When the card is clicked, it should redirect to the register screen.</br>Must Have:<ul><li>Image (Image picker when image selected should display the image selected)</li><li>Name (Text Input)</li><li>Email (Text Input)</li><li>Password (Text Input)</li><li>Register (Button)</li></ul>" 
+    },
+
     { title: "Exercise 6", description: "UPCOMING" },
     { title: "Exercise 7", description: "UPCOMING" },
     { title: "Exercise 8", description: "UPCOMING" },
@@ -33,8 +36,13 @@ export default function Exercise() {
       navigation.navigate("/login");
     } else if (index === 1) {
       navigation.navigate("../exercise4/Stopwatch");
+    } else if (index === 2) { 
+      navigation.navigate("./exercise5/Registerscreen"); 
+    } else if (index === 3) {
+      navigation.navigate("../exercise6/");
     }
   };
+  
 
   return (
     <ScrollView style={styles.container}>
