@@ -24,7 +24,7 @@ export default function Exercise() {
       description: "Create a register screen and add a title and description to the card in the exercise tab.<br/>When the card is clicked, it should redirect to the register screen.</br>Must Have:<ul><li>Image (Image picker when image selected should display the image selected)</li><li>Name (Text Input)</li><li>Email (Text Input)</li><li>Password (Text Input)</li><li>Register (Button)</li></ul>" 
     },
 
-    { title: "Exercise 6", description: "UPCOMING" },
+    { title: "Exercise 6", description: "Create a simple CRUD using useContext and useReducer" },
     { title: "Exercise 7", description: "UPCOMING" },
     { title: "Exercise 8", description: "UPCOMING" },
     { title: "Exercise 9", description: "UPCOMING" },
