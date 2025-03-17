@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { View, Text, TextInput, TouchableOpacity, FlatList, StyleSheet } from "react-native";
-import { useRouter } from "expo-router"; // Use router for navigation
+import { useRouter } from "expo-router";
 import { useTodos } from "./TodoContext";
 import TodoItem from "./TodoItem";
-import { Ionicons } from "@expo/vector-icons"; // Import Ionicons for the arrow icon
+import { Ionicons } from "@expo/vector-icons";
 
 const TodoList = () => {
-  const router = useRouter(); // Use router from expo-router
+  const router = useRouter(); 
   const { todos, dispatch } = useTodos();
   const [text, setText] = useState("");
 
@@ -19,17 +19,17 @@ const TodoList = () => {
 
   return (
     <View style={styles.container}>
-      {/* Back Button */}
+      {}
       <TouchableOpacity style={styles.backButton} onPress={() => router.replace("../(tabs)/exercises")}>
         <Ionicons name="arrow-back" size={24} color="black" />
       </TouchableOpacity>
 
-      {/* Content Wrapper with Padding on Top, Left, and Right */}
+      {}
       <View style={styles.contentWrapper}>
-        {/* Header Section */}
+        {}
         <Text style={styles.title}>TODO LIST</Text>
 
-        {/* Input Section */}
+        {}
         <View style={styles.inputContainer}>
           <TextInput
             style={styles.input}
@@ -43,11 +43,11 @@ const TodoList = () => {
           </TouchableOpacity>
         </View>
 
-        {/* Task List Header */}
+        {}
         <Text style={styles.todoListTitle}>LIST OF TASKS:</Text>
       </View>
 
-      {/* Scrollable Todo List */}
+      {}
       <FlatList
         data={todos}
         keyExtractor={(item) => item.id.toString()}
@@ -74,8 +74,8 @@ const styles = StyleSheet.create({
   },
   contentWrapper: {
     width: "100%",
-    paddingHorizontal: 200, // Added horizontal padding
-    paddingTop: 50, // Added top padding
+    paddingHorizontal: 200,
+    paddingTop: 50,
     alignItems: "center",
   },
   title: {
