@@ -25,7 +25,7 @@ export default function Exercise() {
     },
 
     { title: "Exercise 6", description: "Create a simple CRUD using useContext and useReducer" },
-    { title: "Exercise 7", description: "UPCOMING" },
+    { title: "Exercise 7", description: "Create a simple quiz using the API from Open Trivia Database.</br><li>The user should be able to input the number of questions they want to answer, with a minimum of 10 and a maximum of 30.</li> The UI will also be considered in grading this exercise. After completing the quiz, the user's score should be displayed as score/total questions." },
     { title: "Exercise 8", description: "UPCOMING" },
     { title: "Exercise 9", description: "UPCOMING" },
     {title: "Exercise 10", description: "UPCOMING" },
@@ -40,6 +40,8 @@ export default function Exercise() {
       navigation.navigate("./exercise5/Registerscreen"); 
     } else if (index === 3) {
       navigation.navigate("../exercise6/");
+    } else if (index === 4) {
+      navigation.navigate("../exercise7/SimpleQuiz");
     }
   };
   

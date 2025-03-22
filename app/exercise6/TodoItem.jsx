@@ -16,12 +16,12 @@ const TodoItem = ({ todo }) => {
 
   return (
     <View style={styles.item}>
-      {/* Checkbox for Completion */}
+      {}
       <TouchableOpacity onPress={() => dispatch({ type: "TOGGLE_TODO", payload: todo.id })}>
         <Text style={styles.checkbox}>{todo.completed ? "✔" : " "}</Text>
       </TouchableOpacity>
 
-      {/* Todo Text / Edit Input */}
+      {}
       {isEditing ? (
         <TextInput
           style={styles.input}
@@ -34,12 +34,12 @@ const TodoItem = ({ todo }) => {
         </Text>
       )}
 
-      {/* Edit Button */}
+      {}
       <TouchableOpacity style={styles.button} onPress={toggleEdit}>
         <Text style={styles.edit}>{isEditing ? "✔" : "EDIT"}</Text>
       </TouchableOpacity>
 
-      {/* Delete Button */}
+      {}
       <TouchableOpacity style={styles.button} onPress={() => dispatch({ type: "REMOVE_TODO", payload: todo.id })}>
         <Text style={styles.delete}>❌</Text>
       </TouchableOpacity>
